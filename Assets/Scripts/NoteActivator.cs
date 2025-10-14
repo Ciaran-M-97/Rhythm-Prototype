@@ -5,22 +5,25 @@ public class NoteActivator : MonoBehaviour
     public bool canBePressed;
     public KeyCode keyToPress;
 
+    [HideInInspector]public GameObject healthTracker;
+
      void Start()
-    {
-        
-    }
+     {
+        healthTracker = GameObject.FindGameObjectWithTag("Health Tracker");
+     }
 
      void Update()
-    {
+     {
         if (Input.GetKeyDown(keyToPress))
         {
             if (canBePressed)
             {
                 gameObject.SetActive(false);
+                healthTracker.GetComponent<Health>().AddHealth();
             }
         }
-    }
-
+     }
+ 
 
     private void OnTriggerEnter2D(Collider2D other)
     {
