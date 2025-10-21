@@ -4,6 +4,7 @@ public class NoteScroller : MonoBehaviour
 {
     public float noteSpeed;
     public bool hasStarted;
+    public AudioSource audioSource;
 
     void Start() {
         noteSpeed = noteSpeed / 60f; 
@@ -16,6 +17,7 @@ public class NoteScroller : MonoBehaviour
             if (Input.anyKeyDown)
             {
                 hasStarted = true;
+                audioSource.Play();
             }
         }
         else
