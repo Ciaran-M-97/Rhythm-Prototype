@@ -46,5 +46,14 @@ TagManager:
   - name: Arrows
     uniqueID: 3415130313
     locked: 0
+  - name: bike1
+    uniqueID: 3572736297
+    locked: 0
+  - name: bike2
+    uniqueID: 1053264013
+    locked: 0
+  - name: bike3
+    uniqueID: 3960614123
+    locked: 0
   m_RenderingLayers:
   - Default
